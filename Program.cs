@@ -1,5 +1,5 @@
 ﻿// ==========================================================
-// PROYECTO: Sistema de Vuelos Baratos con Grafos
+// Sistema de Vuelos Baratos con Grafos
 // AUTORES:
 // - Erminia Galeas
 // - Lady Guerrero
@@ -11,7 +11,11 @@ using System.Collections.Generic;
 
 class Program
 {
-    // ===================== GRAFO =====================
+    // ==========================================================
+    // BASE DE DATOS FICTICIA
+    // Se usa un grafo representado con listas de adyacencia
+    // Cada ciudad tiene destinos con un costo asociado
+    // ==========================================================
     static Dictionary<string, List<(string destino, int costo)>> grafo =
         new Dictionary<string, List<(string, int)>>()
     {
@@ -22,15 +26,20 @@ class Program
         { "Loja", new List<(string, int)> { ("Cuenca", 60) } }
     };
 
-    // ===================== REPORTERÍA =====================
+    // ==========================================================
+    // MÉTODO DE REPORTERÍA
+    // Permite visualizar todos los vuelos disponibles
+    // ==========================================================
     static void MostrarVuelos()
     {
         Console.WriteLine("\n--- LISTA DE VUELOS DISPONIBLES ---");
 
+        // Recorre cada ciudad del grafo
         foreach (var ciudad in grafo)
         {
             Console.WriteLine("\nDesde " + ciudad.Key + ":");
 
+            // Recorre cada conexión (vuelo)
             foreach (var vuelo in ciudad.Value)
             {
                 Console.WriteLine(" -> " + vuelo.destino + " ($" + vuelo.costo + ")");
@@ -38,23 +47,29 @@ class Program
         }
     }
 
-    // ===================== DIJKSTRA =====================
+    // ==========================================================
+    // ALGORITMO DIJKSTRA
+    // Encuentra el costo mínimo desde una ciudad origen
+    // ==========================================================
     static Dictionary<string, int> Dijkstra(string inicio)
     {
         var distancias = new Dictionary<string, int>();
         var visitados = new HashSet<string>();
 
+        // Inicializa todas las distancias en infinito
         foreach (var ciudad in grafo.Keys)
             distancias[ciudad] = int.MaxValue;
 
+        // La ciudad inicial tiene costo 0
         distancias[inicio] = 0;
 
+        // Mientras haya nodos sin visitar
         while (visitados.Count < grafo.Count)
         {
-            // Buscar nodo no visitado con menor distancia
             string actual = null;
             int min = int.MaxValue;
 
+            // Busca la ciudad no visitada con menor costo
             foreach (var ciudad in distancias)
             {
                 if (!visitados.Contains(ciudad.Key) && ciudad.Value < min)
@@ -68,6 +83,7 @@ class Program
 
             visitados.Add(actual);
 
+            // Actualiza los costos de las ciudades vecinas
             foreach (var vecino in grafo[actual])
             {
                 int nueva = distancias[actual] + vecino.costo;
@@ -82,7 +98,10 @@ class Program
         return distancias;
     }
 
-    // ===================== MAIN =====================
+    // ==========================================================
+    // MÉTODO PRINCIPAL (MENÚ)
+    // Permite interactuar con el usuario
+    // ==========================================================
     static void Main()
     {
         int opcion = 0;
@@ -91,12 +110,14 @@ class Program
         {
             Console.Clear();
 
+            // Menú principal
             Console.WriteLine("===== SISTEMA DE VUELOS =====");
             Console.WriteLine("1. Ver vuelos disponibles");
             Console.WriteLine("2. Buscar vuelo más barato");
             Console.WriteLine("3. Salir");
             Console.Write("Seleccione una opción: ");
 
+            // Validación de entrada
             if (!int.TryParse(Console.ReadLine(), out opcion))
             {
                 Console.WriteLine("Entrada inválida.");
@@ -107,6 +128,7 @@ class Program
             switch (opcion)
             {
                 case 1:
+                    // Llamada a reportería
                     MostrarVuelos();
                     break;
 
@@ -117,13 +139,17 @@ class Program
                     Console.Write("Ingrese ciudad destino: ");
                     string destino = Console.ReadLine();
 
+                    // Validación de ciudades
                     if (!grafo.ContainsKey(origen) || !grafo.ContainsKey(destino))
                     {
                         Console.WriteLine("Ciudad no válida.");
                     }
                     else
                     {
+                        // Ejecuta algoritmo de búsqueda
                         var distancias = Dijkstra(origen);
+
+                        // Muestra resultado final
                         Console.WriteLine("\nCosto mínimo: $" + distancias[destino]);
                     }
                     break;
