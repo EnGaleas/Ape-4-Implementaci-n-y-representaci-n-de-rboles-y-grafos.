@@ -1,0 +1,15 @@
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\bin\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.exe
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\bin\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.deps.json
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\bin\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.runtimeconfig.json
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\bin\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.dll
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\bin\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.pdb
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.AssemblyInfoInputs.cache
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.AssemblyInfo.cs
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.sourcelink.json
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.dll
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\refint\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.dll
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.pdb
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.genruntimeconfig.cache
+C:\Users\Admin\Videos\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD\obj\Debug\net10.0\ref\APE#4-Encuentro de vuelos baratos a partir de una base de datos. EDD.dll
